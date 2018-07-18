@@ -1,0 +1,28 @@
+{
+  "name": "node-js-to-do-app",
+  "version": "1.0.0",
+  "description": "a todo app made with nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SL0TR/node-js-to-do-app.git"
+  },
+  "keywords": [
+    "todo",
+    "app"
+  ],
+  "author": "mohaimin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SL0TR/node-js-to-do-app/issues"
+  },
+  "homepage": "https://github.com/SL0TR/node-js-to-do-app#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3"
+  }
+}
