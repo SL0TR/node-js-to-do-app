@@ -14,9 +14,8 @@ module.exports = (app) => {
   });
 
   app.delete('/:item', (req, res) => {
-    data = data.filter(function (todo) {
-     return todo.item.replace(/ /g, '') !== req.params.item;
-    });
+    data = data.filter(todo => todo.item.replace(/ /g, '') !== req.params.item
+    );
     res.json(data);
   });
 
