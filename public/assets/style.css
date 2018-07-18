@@ -19,28 +19,36 @@ body{
 h1 {
   text-align: center;
   margin: 3rem 0;
-  font-size: 5rem;
+  font-size: 6rem;
 }
 
-#todo-table{
+.todo-table {
   position: relative;
-  width: 95%;
-  background: #090d13;
   margin: 0 auto;
   padding: 20px;
   box-sizing: border-box;
+  width: 55%;
+  margin: 0 auto;
+}
+
+form {
+  display: flex;
+  align-items: center;
 }
 
 
 input[type="text"]{
   width: 70%;
   padding: 20px;
-  background:#181c22;
   border: 0;
   float: left;
-  font-size: 20px;
+  font-size: 1.5rem;
   color: #989898;
   font-family: 'Gaegu', cursive;
+  height: 3.5rem;
+  position: relative;
+  background: #eee;
+  border-radius: .2rem;
 }
 
 input[type="text"]:focus,
@@ -49,16 +57,34 @@ button:focus {
 }
 
 button{
-  padding: 20px;
   width: 30%;
   float: left;
   background: #23282e;
   border: 0;
   box-sizing: border-box;
-  color: #fff;
+  color: #eee;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 2rem;
   font-family: 'Gaegu', cursive;
+  height: 100%;
+  box-shadow: 0px 0px 5px 0px rgba(10,10,10,1);
+  height: 4rem;
+  position: absolute;
+  right: 1rem;
+  border-radius: .2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button:focus,
+button:active {
+  box-shadow: 0px 0px 2px 0px rgba(10,10,10,1);
+  transform: scale(.98);
+}
+
+button:hover {
+  box-shadow: 0px 0px 10px 0px rgba(10,10,10,1);
 }
 
 ul{
@@ -80,5 +106,36 @@ li{
 
 li:hover{
   text-decoration: line-through;
-  background: rgba(0,0,0,0.2);
+  color: #c0392b;
+}
+
+
+@media (max-width: 600px) {
+
+  h1 {
+    font-size: 3.5rem;
+  }
+  .todo-table {
+    width: 95%;
+  }
+
+  form {
+    flex-direction: column;
+  }
+
+  button {
+    top: 8rem;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    padding: 0;
+  }
+
+  input[type="text"] {
+    width: 100%;
+  }
+
+  ul {
+    margin-top: 8rem;
+  }
 }
